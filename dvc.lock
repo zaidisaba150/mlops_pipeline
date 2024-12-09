@@ -65,8 +65,8 @@ stages:
       nfiles: 2
     - path: src/model_building.py
       hash: md5
-      md5: d62f4253d4f19d15916f91db4ce82432
-      size: 4425
+      md5: e378ede8ed6c93ec7110ae772faae459
+      size: 4557
     params:
       params.yaml:
         model_building.n_estimators: 22
@@ -81,8 +81,8 @@ stages:
     deps:
     - path: models/model.pkl
       hash: md5
-      md5: 1c39d140b82826ec2294d182ccbd561a
-      size: 648774
+      md5: 588ef6947dd816fbca013e9484701c03
+      size: 720147
     - path: src/model_evaluation.py
       hash: md5
       md5: 553abb63c25d201ab4732efe779df04d

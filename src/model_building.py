@@ -4,6 +4,7 @@ import pandas as pd
 import pickle
 import logging
 from sklearn.ensemble import RandomForestClassifier
+import xgboost as xgb
 import yaml
 
 # Ensure the "logs" directory exists
@@ -82,6 +83,7 @@ def train_model(X_train: np.ndarray, y_train: np.ndarray, params: dict) -> Rando
         
         logger.debug('Initializing RandomForest model with parameters: %s', params)
         clf = RandomForestClassifier(n_estimators=params['n_estimators'], random_state=params['random_state'])
+        # clf = xgb.XGBClassifier(n_estimators=params['n_estimators'], random_state=params['random_state'])
         
         logger.debug('Model training started with %d samples', X_train.shape[0])
         clf.fit(X_train, y_train)
